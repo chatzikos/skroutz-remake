@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: regular;
+    src: url(./fonts/ProximaNova-Regular.otf);
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    src: url(./fonts/ProximaNova-Bold.otf);
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: bolder;
+    src: url(./fonts/ProximaNova-Black.otf);
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    font-weight: lighter;
+    src: url(./fonts/ProximaNova-Alt-Light.otf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: lighter;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    box-sizing: border-box;
+
+}
+
+body{
+    background: #FFFFFF;
+    color: #101010;
+}
+
+header{
+    padding: 32px;
+
+    display: flex;
+    align-items: center;
+    gap: 4.5rem;
+
+    font-family: sans-serif;
+}
+
+header .logo img{
+    height: 43px;
+    cursor: pointer;
+}
+
+header .search form input{
+    padding: 0.9rem;
+    width: 500px;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 50px;
+    outline: transparent;
+
+    letter-spacing: 0.2px;
+    font-size: 0.95rem;
+}
+
+header .search form input:hover, header .search form input:focus{
+    border: 1px solid #f68b24;
+}
+
+header .links{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 2.5rem; */
+}
+
+header .links div{
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    border-right: 1px solid #e8e8e8;
+}
+
+header .links div:last-child{
+    border-right: none;
+}
+
+header .links #loginSignupLink{
+    text-decoration: none;
+    color: #707479;
+}
+
+header .links #deliverTo a,
+header .links #selectLanguage a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    color: #101010;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+header .links #deliverTo a img,
+header .links #selectLanguage a img{
+    height: 1.1em;
+}
+
+main{
+    width: 95%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+main .shortcuts{
+    margin-bottom: 2.5rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+main .shortcuts .shortcutLink{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.5rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+        
+    background: #f8f8f8;
+
+    text-decoration: none;
+    text-wrap: wrap;
+    text-align: left;
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
+
+
+    border-radius: 8px;
+
+    color: #363636;
+    font-weight: 600;
+}
+
+main .shortcuts .shortcutLink:hover{
+    background: #f1f1f1;
+}
+
+main .shortcuts .shortcutLink img{
+    display: block;
+    aspect-ratio: 1;
+    max-height: 40px;
+}
+
+main .recently-viewed{
+    margin-bottom: 3.5rem;
+}
+
+
+main .recently-viewed .title{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    margin-bottom: 1.45rem;
+}
+
+main .recently-viewed-items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem; 
+}
+
+main .recently-viewed-items .recently-viewed-item{
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+main .recently-viewed-items .recently-viewed-item .product-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    background: #efefef;
+    border-radius: 10px;
+}
+
+main .recently-viewed-items .recently-viewed-item .product-image img{
+    display: block;
+    max-width: 70px;
+}
+
+main .recently-viewed-items .recently-viewed-item .product-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+main .recently-viewed-items .recently-viewed-item .product-info .product-title{
+    color: #101010;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: -0.1px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+main .recently-viewed-items .recently-viewed-item .product-info .product-pricing{
+    font-size: 0.8rem;
+    color: #707070;
+}
+
+main .recently-viewed-items .recently-viewed-item .product-info .product-pricing .product-price{
+    color: #101010;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+main .timeline-card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+}
+
+main .timeline-card .timeline-image img{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+}
+
+main .timeline-card .timeline-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 60px;
+}
+
+main .timeline-card .timeline-content .timeline-heading{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #101010;
+}
+
+main .timeline-card .timeline-content .timeline-subheading{
+    color: #707070;
+}
+
+main .timeline-card .timeline-content .timeline-link a{
+    color: #1c7ece;
+    text-decoration: none;
+}
